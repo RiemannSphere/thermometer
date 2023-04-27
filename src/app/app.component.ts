@@ -7,5 +7,5 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
-    sliderVal = 10;
+    sliderVal = 20;
 }

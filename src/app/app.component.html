@@ -1,9 +1,9 @@
-<app-thermometer [temp]="sliderVal" [minTemp]="10" [maxTemp]="50"></app-thermometer>
+<app-thermometer [temp]="sliderVal" [minTemp]="-10" [maxTemp]="50"></app-thermometer>
 
 <!-- Slider for the testing purpose -->
 <input 
     type="range" 
-    min="10" 
+    min="-10" 
     max="50" 
     value="1" 
     [(ngModel)]="sliderVal" 
