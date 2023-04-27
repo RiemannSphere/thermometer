@@ -1,0 +1,24 @@
+<div class="app-thermometer">
+    <div class="app-thermometer__clock">
+        <div 
+            class="clock__marker-min" 
+            [style.top]="[minTemp, maxTemp, minTemp] | toAngle | toMargin:'top':64" 
+            [style.left]="[minTemp, maxTemp, minTemp] | toAngle | toMargin:'left':64"
+            [style.transform]="'translate(-50%, 50%) rotate(calc(180deg - ' + ([minTemp, maxTemp, minTemp] | toAngle:'deg') + 'deg))'"
+        ></div>    
+        <div 
+            class="clock__marker-max" 
+            [style.top]="[minTemp, maxTemp, maxTemp] | toAngle | toMargin:'top':64" 
+            [style.left]="[minTemp, maxTemp, maxTemp] | toAngle | toMargin:'left':64"
+            [style.transform]="'translate(-50%, 50%) rotate(calc(180deg - ' + ([minTemp, maxTemp, maxTemp] | toAngle:'deg') + 'deg))'"
+        ></div> 
+        <div 
+            class="clock__needle" 
+            [style.top]="[minTemp, maxTemp, temp] | toAngle | toMargin:'top':64" 
+            [style.left]="[minTemp, maxTemp, temp] | toAngle | toMargin:'left':64"
+            [style.transform]="'rotate(calc(180deg - ' + ([minTemp, maxTemp, temp] | toAngle:'deg') + 'deg))'"
+        ></div> 
+    </div>
+    
+    <div class="app-thermometer__temperature">{{ temp }}&deg;C</div>
+</div>
